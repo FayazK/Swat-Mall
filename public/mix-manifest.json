@@ -2,6 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/theme/css/landing_page.css": "/theme/css/landing_page.css",
-    "/theme/css/style.css": "/theme/css/style.css",
+    "/theme/css/front.css": "/theme/css/front.css",
     "/theme/css/admin.css": "/theme/css/admin.css"
 }

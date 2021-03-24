@@ -2,7 +2,7 @@ const mix = require('laravel-mix')
 
 mix.options({
     processCssUrls: false
-});
+})
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -25,7 +25,7 @@ mix.js('resources/js/app.js', 'public/js')
  * --------------------------------------------------------------
  */
 mix.sass('resources/scss/admin.scss', 'public/theme/css')
-    .sass('resources/scss/style.scss', 'public/theme/css')
+    .sass('resources/scss/front.scss', 'public/theme/css')
     .sass('resources/scss/landing_page.scss', 'public/theme/css')
 
 if (mix.inProduction()) {
