@@ -1,3 +1,9 @@
+@import "vendors/fontawesome";
+@import "vendors/slick";
+@import "vendors/slick-theme";
+@import "vendors/animate";
+@import "vendors/themify-icons";
+@import "vendors/bootstrap";
 .theme-color-1 {
     --theme-deafult: #ff4c3b;
 }
@@ -36,11 +42,11 @@
 }
 .theme-color-13 {
     --theme-deafult: #01effc;
-    --theme-deafult2: #485ff2; 
+    --theme-deafult2: #485ff2;
 }
 .theme-color-14 {
     --theme-deafult: #5d7227;
-    --theme-deafult2: #203f15; 
+    --theme-deafult2: #203f15;
 }
 .theme-color-15 {
     --theme-deafult: #ff9944;
@@ -80,7 +86,7 @@
 }
 .theme-color-27 {
     --theme-deafult: #f39910;
-    --theme-deafult2:#394868; 
+    --theme-deafult2:#394868;
 }
 .theme-color-28 {
     --theme-deafult:#387ef0;
