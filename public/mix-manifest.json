@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/theme/js/admin.js": "/theme/js/admin.js",
     "/css/app.css": "/css/app.css",
     "/theme/css/landing_page.css": "/theme/css/landing_page.css",
     "/theme/css/front.css": "/theme/css/front.css",
