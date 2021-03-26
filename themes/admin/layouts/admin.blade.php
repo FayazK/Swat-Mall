@@ -1,1427 +1,360 @@
 <!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Multikart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords"
-          content="admin template, Multikart admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{asset('theme/images/dashboard/favicon.png')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('theme/images/dashboard/favicon.png')}}" type="image/x-icon">
-    <title>@yield('title')</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Starter</title>
 
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('theme/css/admin.css')}}">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{asset('theme/css/admin.css')}}">
 </head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
 
-<body>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="index3.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
 
-<!-- page-wrapper Start-->
-<div class="page-wrapper">
-
-    <!-- Page Header Start-->
-    <div class="page-main-header">
-        <div class="main-header-right row">
-            <div class="main-header-left d-lg-none w-auto">
-                <div class="logo-wrapper"><a href="index.html"><img class="blur-up lazyloaded"
-                                                                    src="../assets/images/dashboard/multikart-logo.png"
-                                                                    alt=""></a></div>
-            </div>
-            <div class="mobile-sidebar w-auto">
-                <div class="media-body text-end switch-sm">
-                    <label class="switch"><a href="#"><i id="sidebar-toggle" data-feather="align-left"></i></a></label>
-                </div>
-            </div>
-            <div class="nav-right col">
-                <ul class="nav-menus">
-                    <li>
-                        <form class="form-inline search-form">
-                            <div class="form-group">
-                                <input class="form-control-plaintext" type="search" placeholder="Search.."><span
-                                    class="d-sm-none mobile-search"><i data-feather="search"></i></span>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Navbar Search -->
+            <li class="nav-item">
+                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="navbar-search-block">
+                    <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                   aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                    <i class="fas fa-times"></i>
+                                </button>
                             </div>
-                        </form>
-                    </li>
-                    <li><a class="text-dark" href="#!" onclick="toggleFullScreen()"><i
-                                data-feather="maximize-2"></i></a></li>
-                    <li class="onhover-dropdown"><a class="txt-dark" href="#">
-                            <h6>EN</h6></a>
-                        <ul class="language-dropdown onhover-show-div p-20">
-                            <li><a href="#" data-lng="en"><i class="flag-icon flag-icon-is"></i> English</a></li>
-                            <li><a href="#" data-lng="es"><i class="flag-icon flag-icon-um"></i> Spanish</a></li>
-                            <li><a href="#" data-lng="pt"><i class="flag-icon flag-icon-uy"></i> Portuguese</a></li>
-                            <li><a href="#" data-lng="fr"><i class="flag-icon flag-icon-nz"></i> French</a></li>
-                        </ul>
-                    </li>
-                    <li class="onhover-dropdown"><i data-feather="bell"></i><span
-                            class="badge badge-pill badge-primary pull-right notification-badge">3</span><span
-                            class="dot"></span>
-                        <ul class="notification-dropdown onhover-show-div p-0">
-                            <li>Notification <span class="badge badge-pill badge-primary pull-right">3</span></li>
-                            <li>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h6 class="mt-0"><span><i class="shopping-color"
-                                                                  data-feather="shopping-bag"></i></span>Your order
-                                            ready for Ship..!</h6>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h6 class="mt-0 txt-success"><span><i class="download-color font-success"
-                                                                              data-feather="download"></i></span>Download
-                                            Complete</h6>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h6 class="mt-0 txt-danger"><span><i class="alert-color font-danger"
-                                                                             data-feather="alert-circle"></i></span>250
-                                            MB trash files</h6>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="txt-dark"><a href="#">All</a> notification</li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="right_side_toggle" data-feather="message-square"></i><span
-                                class="dot"></span></a></li>
-                    <li class="onhover-dropdown">
-                        <div class="media align-items-center"><img
-                                class="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded"
-                                src="../assets/images/dashboard/man.png" alt="header-user">
-                            <div class="dotted-animation"><span class="animate-circle"></span><span
-                                    class="main-circle"></span></div>
                         </div>
-                        <ul class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover">
-                            <li><a href="#"><i data-feather="user"></i>Edit Profile</a></li>
-                            <li><a href="#"><i data-feather="mail"></i>Inbox</a></li>
-                            <li><a href="#"><i data-feather="lock"></i>Lock Screen</a></li>
-                            <li><a href="#"><i data-feather="settings"></i>Settings</a></li>
-                            <li><a href="#"><i data-feather="log-out"></i>Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header Ends -->
-
-    <!-- Page Body Start-->
-    <div class="page-body-wrapper">
-
-        <!-- Page Sidebar Start-->
-        <div class="page-sidebar">
-            <div class="main-header-left d-none d-lg-block">
-                <div class="logo-wrapper"><a href="index.html"><img class="blur-up lazyloaded"
-                                                                    src="../assets/images/dashboard/multikart-logo.png"
-                                                                    alt=""></a></div>
-            </div>
-            <div class="sidebar custom-scrollbar">
-                <div class="sidebar-user text-center">
-                    <div><img class="img-60 rounded-circle lazyloaded blur-up" src="../assets/images/dashboard/man.png"
-                              alt="#">
-                    </div>
-                    <h6 class="mt-3 f-14">JOHN</h6>
-                    <p>general manager.</p>
+                    </form>
                 </div>
-                <ul class="sidebar-menu">
-                    <li><a class="sidebar-header" href="index.html"><i
-                                data-feather="home"></i><span>Dashboard</span></a></li>
-                    <li><a class="sidebar-header" href="#"><i data-feather="box"></i> <span>Products</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li>
-                                <a href="#"><i class="fa fa-circle"></i>
-                                    <span>Physical</span> <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="category.html"><i class="fa fa-circle"></i>Category</a></li>
-                                    <li><a href="category-sub.html"><i class="fa fa-circle"></i>Sub Category</a></li>
-                                    <li><a href="product-list.html"><i class="fa fa-circle"></i>Product List</a></li>
-                                    <li><a href="product-detail.html"><i class="fa fa-circle"></i>Product Detail</a>
-                                    </li>
-                                    <li><a href="add-product.html"><i class="fa fa-circle"></i>Add Product</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-circle"></i>
-                                    <span>Digital</span> <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="category-digital.html"><i class="fa fa-circle"></i>Category</a></li>
-                                    <li><a href="category-digitalsub.html"><i class="fa fa-circle"></i>Sub Category</a>
-                                    </li>
-                                    <li><a href="product-listdigital.html"><i class="fa fa-circle"></i>Product List</a>
-                                    </li>
-                                    <li><a href="add-digital-product.html"><i class="fa fa-circle"></i>Add Product</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href=""><i data-feather="dollar-sign"></i><span>Sales</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="order.html"><i class="fa fa-circle"></i>Orders</a></li>
-                            <li><a href="transactions.html"><i class="fa fa-circle"></i>Transactions</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href=""><i data-feather="tag"></i><span>Coupons</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="coupon-list.html"><i class="fa fa-circle"></i>List Coupons</a></li>
-                            <li><a href="coupon-create.html"><i class="fa fa-circle"></i>Create Coupons </a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href="#"><i data-feather="clipboard"></i><span>Pages</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="pages-list.html"><i class="fa fa-circle"></i>List Page</a></li>
-                            <li><a href="page-create.html"><i class="fa fa-circle"></i>Create Page</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href="media.html"><i data-feather="camera"></i><span>Media</span></a>
-                    </li>
-                    <li><a class="sidebar-header" href="#"><i data-feather="align-left"></i><span>Menus</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="menu-list.html"><i class="fa fa-circle"></i>Menu Lists</a></li>
-                            <li><a href="create-menu.html"><i class="fa fa-circle"></i>Create Menu</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href=""><i data-feather="user-plus"></i><span>Users</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="user-list.html"><i class="fa fa-circle"></i>User List</a></li>
-                            <li><a href="create-user.html"><i class="fa fa-circle"></i>Create User</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href=""><i data-feather="users"></i><span>Vendors</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="list-vendor.html"><i class="fa fa-circle"></i>Vendor List</a></li>
-                            <li><a href="create-vendors.html"><i class="fa fa-circle"></i>Create Vendor</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href=""><i data-feather="chrome"></i><span>Localization</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="translations.html"><i class="fa fa-circle"></i>Translations</a></li>
-                            <li><a href="currency-rates.html"><i class="fa fa-circle"></i>Currency Rates</a></li>
-                            <li><a href="taxes.html"><i class="fa fa-circle"></i>Taxes</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href="reports.html"><i
-                                data-feather="bar-chart"></i><span>Reports</span></a></li>
-                    <li><a class="sidebar-header" href=""><i data-feather="settings"></i><span>Settings</span><i
-                                class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="sidebar-submenu">
-                            <li><a href="profile.html"><i class="fa fa-circle"></i>Profile</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="sidebar-header" href="invoice.html"><i data-feather="archive"></i><span>Invoice</span></a>
-                    </li>
-                    <li><a class="sidebar-header" href="login.html"><i data-feather="log-in"></i><span>Login</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Page Sidebar Ends-->
+            </li>
 
-        <!-- Right sidebar Start-->
-        <div class="right-sidebar" id="right_side_bar">
-            <div>
-                <div class="container p-0">
-                    <div class="modal-header p-l-20 p-r-20">
-                        <div class="col-sm-8 p-0">
-                            <h6 class="modal-title font-weight-bold">FRIEND LIST</h6>
-                        </div>
-                        <div class="col-sm-4 text-end p-0"><i class="me-2" data-feather="settings"></i></div>
-                    </div>
-                </div>
-                <div class="friend-list-search mt-0">
-                    <input type="text" placeholder="search friend"><i class="fa fa-search"></i>
-                </div>
-                <div class="p-l-30 p-r-30">
-                    <div class="chat-box">
-                        <div class="people-list friend-list">
-                            <ul class="list">
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/user.png" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Vincent Porter</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/user1.jpg" alt="">
-                                    <div class="status-circle away"></div>
-                                    <div class="about">
-                                        <div class="name">Ain Chavez</div>
-                                        <div class="status"> 28 minutes ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/user2.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Kori Thomas</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/user3.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Erica Hughes</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/man.png" alt="">
-                                    <div class="status-circle offline"></div>
-                                    <div class="about">
-                                        <div class="name">Ginger Johnston</div>
-                                        <div class="status"> 2 minutes ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/user5.jpg" alt="">
-                                    <div class="status-circle away"></div>
-                                    <div class="about">
-                                        <div class="name">Prasanth Anand</div>
-                                        <div class="status"> 2 hour ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image"
-                                                          src="../assets/images/dashboard/designer.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Hileri Jecno</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Right sidebar Ends-->
-
-        <div class="page-body">
-
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="page-header-left">
-                                <h3>Dashboard
-                                    <small>Multikart Admin panel</small>
+            <!-- Messages Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="far fa-comments"></i>
+                    <span class="badge badge-danger navbar-badge">3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <a href="#" class="dropdown-item">
+                        <!-- Message Start -->
+                        <div class="media">
+                            <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                    Brad Diesel
+                                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                 </h3>
+                                <p class="text-sm">Call me whenever you can...</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <ol class="breadcrumb pull-right">
-                                <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
-                            </ol>
+                        <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <!-- Message Start -->
+                        <div class="media">
+                            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                    John Pierce
+                                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">I got your message bro</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            </div>
                         </div>
+                        <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <!-- Message Start -->
+                        <div class="media">
+                            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                    Nora Silvester
+                                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">The subject goes here</p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            </div>
+                        </div>
+                        <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                </div>
+            </li>
+            <!-- Notifications Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="far fa-bell"></i>
+                    <span class="badge badge-warning navbar-badge">15</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-header">15 Notifications</span>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-envelope mr-2"></i> 4 new messages
+                        <span class="float-right text-muted text-sm">3 mins</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-users mr-2"></i> 8 friend requests
+                        <span class="float-right text-muted text-sm">12 hours</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-file mr-2"></i> 3 new reports
+                        <span class="float-right text-muted text-sm">2 days</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <i class="fas fa-th-large"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link">
+            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                 style="opacity: .8">
+            <span class="brand-text font-weight-light">AdminLTE 3</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Alexander Pierce</a>
+                </div>
+            </div>
+
+            <!-- SidebarSearch Form -->
+            <div class="form-inline">
+                <div class="input-group" data-widget="sidebar-search">
+                    <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                           aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-sidebar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <!-- Container-fluid Ends-->
 
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card o-hidden widget-cards">
-                            <div class="bg-warning card-body">
-                                <div class="media static-top-widget row">
-                                    <div class="icons-widgets col-4">
-                                        <div class="align-self-center text-center"><i data-feather="navigation"
-                                                                                      class="font-warning"></i></div>
-                                    </div>
-                                    <div class="media-body col-8"><span class="m-0">Earnings</span>
-                                        <h3 class="mb-0">$ <span class="counter">6659</span><small> This Month</small>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card o-hidden  widget-cards">
-                            <div class="bg-secondary card-body">
-                                <div class="media static-top-widget row">
-                                    <div class="icons-widgets col-4">
-                                        <div class="align-self-center text-center"><i data-feather="box"
-                                                                                      class="font-secondary"></i></div>
-                                    </div>
-                                    <div class="media-body col-8"><span class="m-0">Products</span>
-                                        <h3 class="mb-0">$ <span class="counter">9856</span><small> This Month</small>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card o-hidden widget-cards">
-                            <div class="bg-primary card-body">
-                                <div class="media static-top-widget row">
-                                    <div class="icons-widgets col-4">
-                                        <div class="align-self-center text-center"><i data-feather="message-square"
-                                                                                      class="font-primary"></i></div>
-                                    </div>
-                                    <div class="media-body col-8"><span class="m-0">Messages</span>
-                                        <h3 class="mb-0">$ <span class="counter">893</span><small> This Month</small>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card o-hidden widget-cards">
-                            <div class="bg-danger card-body">
-                                <div class="media static-top-widget row">
-                                    <div class="icons-widgets col-4">
-                                        <div class="align-self-center text-center"><i data-feather="users"
-                                                                                      class="font-danger"></i></div>
-                                    </div>
-                                    <div class="media-body col-8"><span class="m-0">New Vendors</span>
-                                        <h3 class="mb-0">$ <span class="counter">45631</span><small> This Month</small>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Market Value</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="market-chart"></div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head" title="Copy"><i
-                                            class="icofont icofont-copy-alt"></i></button>
-                                    <pre><code class="language-html" id="example-head">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div class="market-chart"&gt;&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Latest Orders</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="user-status table-responsive latest-order-table">
-                                    <table class="table table-bordernone">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Order ID</th>
-                                            <th scope="col">Order Total</th>
-                                            <th scope="col">Payment Method</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="digits">$120.00</td>
-                                            <td class="font-danger">Bank Transfers</td>
-                                            <td class="digits">On Way</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="digits">$90.00</td>
-                                            <td class="font-secondary">Ewallets</td>
-                                            <td class="digits">Delivered</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="digits">$240.00</td>
-                                            <td class="font-warning">Cash</td>
-                                            <td class="digits">Delivered</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td class="digits">$120.00</td>
-                                            <td class="font-primary">Direct Deposit</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td class="digits">$50.00</td>
-                                            <td class="font-primary">Bank Transfers</td>
-                                            <td class="digits">Delivered</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <a href="order.html" class="btn btn-primary">View All Orders</a>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head1" title="" data-original-title="Copy">
-                                        <i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head1">
-&lt;div class="user-status table-responsive latest-order-table"&gt;
-    &lt;table class="table table-bordernone"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;Order ID&lt;/th&gt;
-                &lt;th scope="col"&gt;Order Total&lt;/th&gt;
-                &lt;th scope="col"&gt;Payment Method&lt;/th&gt;
-                &lt;th scope="col"&gt;Status&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;1&lt;/td&gt;
-                &lt;td class="digits"&gt;$120.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Bank Transfers&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;2&lt;/td&gt;
-                &lt;td class="digits"&gt;$90.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Ewallets&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;3&lt;/td&gt;
-                &lt;td class="digits"&gt;$240.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cash&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;4&lt;/td&gt;
-                &lt;td class="digits"&gt;$120.00&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Direct Deposit&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;5&lt;/td&gt;
-                &lt;td class="digits"&gt;$50.00&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Bank Transfers&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                                    </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Total Sales</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder"
-                                                 id="simple-line-chart-sparkline-3"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>42% <span><i class="fa fa-angle-up font-primary"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Sales Last Month</span>
-                                        <h2 class="mb-0">9054</h2>
-                                        <p>0.25% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Gross sales of August</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-primary b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="briefcase"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Total purchase</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder" id="simple-line-chart-sparkline"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>20% <span><i class="fa fa-angle-up font-secondary"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Monthly purchase</span>
-                                        <h2 class="mb-0">2154</h2>
-                                        <p>0.13% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Avg Gross purchase</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-secondary b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="credit-card"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Total cash transaction</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder"
-                                                 id="simple-line-chart-sparkline-2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>28% <span><i class="fa fa-angle-up font-warning"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Cash on hand</span>
-                                        <h2 class="mb-0">4672</h2>
-                                        <p>0.8% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Details about cash</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-warning b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="shopping-cart"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Daily Deposits</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder"
-                                                 id="simple-line-chart-sparkline-1"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>75% <span><i class="fa fa-angle-up font-danger"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Security Deposits</span>
-                                        <h2 class="mb-0">0782</h2>
-                                        <p>0.25% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Gross sales of June</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-danger b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="calendar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Buy / Sell</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body sell-graph">
-                                <canvas id="myGraph"></canvas>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head3" title="" data-original-title="Copy">
-                                        <i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head3">&lt;div class="card-body sell-graph"&gt;
-   &lt;canvas id="myGraph"&gt;&lt;/canvas&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card height-equal">
-                            <div class="card-header">
-                                <h5>Goods return</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="user-status table-responsive products-table">
-                                    <table class="table table-bordernone mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Details</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Price</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Simply dummy text of the printing</td>
-                                            <td class="digits">1</td>
-                                            <td class="font-primary">Pending</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Long established</td>
-                                            <td class="digits">5</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>sometimes by accident</td>
-                                            <td class="digits">10</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Classical Latin literature</td>
-                                            <td class="digits">9</td>
-                                            <td class="font-primary">Return</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>keep the site on the Internet</td>
-                                            <td class="digits">8</td>
-                                            <td class="font-primary">Pending</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Molestiae consequatur</td>
-                                            <td class="digits">3</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pain can procure</td>
-                                            <td class="digits">8</td>
-                                            <td class="font-primary">Return</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head4" title="" data-original-title="Copy">
-                                        <i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head4">
-&lt;div class="user-status table-responsive products-table"&gt;
-    &lt;table class="table table-bordernone mb-0"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;Details&lt;/th&gt;
-                &lt;th scope="col"&gt;Quantity&lt;/th&gt;
-                &lt;th scope="col"&gt;Status&lt;/th&gt;
-                &lt;th scope="col"&gt;Price&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Simply dummy text of the printing&lt;/td&gt;
-                &lt;td class="digits"&gt;1&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Long established&lt;/td&gt;
-                &lt;td class="digits"&gt;5&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;sometimes by accident&lt;/td&gt;
-                &lt;td class="digits"&gt;10&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Classical Latin literature&lt;/td&gt;
-                &lt;td class="digits"&gt;9&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Return&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;keep the site on the Internet&lt;/td&gt;
-                &lt;td class="digits"&gt;8&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Molestiae consequatur&lt;/td&gt;
-                &lt;td class="digits"&gt;3&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Pain can procure&lt;/td&gt;
-                &lt;td class="digits"&gt;8&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Return&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                                    </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card height-equal">
-                            <div class="card-header">
-                                <h5>Empolyee Status</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="user-status table-responsive products-table">
-                                    <table class="table table-bordernone mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Designation</th>
-                                            <th scope="col">Skill Level</th>
-                                            <th scope="col">Experience</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td class="bd-t-none u-s-tb">
-                                                <div class="align-middle image-sm-size"><img
-                                                        class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded"
-                                                        src="../assets/images/dashboard/user2.jpg" alt=""
-                                                        data-original-title="" title="">
-                                                    <div class="d-inline-block">
-                                                        <h6>John Deo <span class="text-muted digits">(14+ Online)</span>
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Designer</td>
-                                            <td>
-                                                <div class="progress-showcase">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-primary" role="progressbar"
-                                                             style="width: 30%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="digits">2 Year</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bd-t-none u-s-tb">
-                                                <div class="align-middle image-sm-size"><img
-                                                        class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded"
-                                                        src="../assets/images/dashboard/user1.jpg" alt=""
-                                                        data-original-title="" title="">
-                                                    <div class="d-inline-block">
-                                                        <h6>Holio Mako <span
-                                                                class="text-muted digits">(250+ Online)</span></h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Developer</td>
-                                            <td>
-                                                <div class="progress-showcase">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 70%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="digits">3 Year</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bd-t-none u-s-tb">
-                                                <div class="align-middle image-sm-size"><img
-                                                        class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded"
-                                                        src="../assets/images/dashboard/man.png" alt=""
-                                                        data-original-title="" title="">
-                                                    <div class="d-inline-block">
-                                                        <h6>Mohsib lara<span
-                                                                class="text-muted digits">(99+ Online)</span></h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Tester</td>
-                                            <td>
-                                                <div class="progress-showcase">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-primary" role="progressbar"
-                                                             style="width: 60%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="digits">5 Month</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bd-t-none u-s-tb">
-                                                <div class="align-middle image-sm-size"><img
-                                                        class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded"
-                                                        src="../assets/images/dashboard/user.png" alt=""
-                                                        data-original-title="" title="">
-                                                    <div class="d-inline-block">
-                                                        <h6>Hileri Soli <span
-                                                                class="text-muted digits">(150+ Online)</span></h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Designer</td>
-                                            <td>
-                                                <div class="progress-showcase">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-secondary" role="progressbar"
-                                                             style="width: 30%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="digits">3 Month</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bd-t-none u-s-tb">
-                                                <div class="align-middle image-sm-size"><img
-                                                        class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded"
-                                                        src="../assets/images/dashboard/designer.jpg" alt=""
-                                                        data-original-title="" title="">
-                                                    <div class="d-inline-block">
-                                                        <h6>Pusiz bia <span
-                                                                class="text-muted digits">(14+ Online)</span></h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Designer</td>
-                                            <td>
-                                                <div class="progress-showcase">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-primary" role="progressbar"
-                                                             style="width: 90%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="digits">5 Year</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head5" title="" data-original-title="Copy">
-                                        <i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head5">
-&lt;div class="user-status table-responsive products-table"&gt;
-    &lt;table class="table table-bordernone mb-0"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;Name&lt;/th&gt;
-                &lt;th scope="col"&gt;Designation&lt;/th&gt;
-                &lt;th scope="col"&gt;Skill Level&lt;/th&gt;
-                &lt;th scope="col"&gt;Experience&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="bd-t-none u-s-tb"&gt;
-                        &lt;div class="align-middle image-sm-size"&gt;&lt;img class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/user2.jpg" alt="" data-original-title="" title=""&gt;
-                        &lt;div class="d-inline-block"&gt;
-                        &lt;h6&gt;John Deo &lt;span class="text-muted digits"&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
-                        &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                    &lt;td&gt;Designer&lt;/td&gt;
-                    &lt;td&gt;
-                        &lt;div class="progress-showcase"&gt;
-                        &lt;div class="progress" style="height: 8px;"&gt;
-                        &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                    &lt;td class="digits"&gt;2 Year&lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td class="bd-t-none u-s-tb"&gt;
-                    &lt;div class="align-middle image-sm-size"&gt;&lt;img class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/user1.jpg" alt="" data-original-title="" title=""&gt;
-                    &lt;div class="d-inline-block"&gt;
-                    &lt;h6&gt;Holio Mako &lt;span class="text-muted digits"&gt;(250+ Online)&lt;/span&gt;&lt;/h6&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Developer&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;div class="progress-showcase"&gt;
-                    &lt;div class="progress" style="height: 8px;"&gt;
-                    &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class="digits"&gt;3 Year&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td class="bd-t-none u-s-tb"&gt;
-                    &lt;div class="align-middle image-sm-size"&gt;&lt;img class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/man.png" alt="" data-original-title="" title=""&gt;
-                    &lt;div class="d-inline-block"&gt;
-                    &lt;h6&gt;Mohsib lara&lt;span class="text-muted digits"&gt;(99+ Online)&lt;/span&gt;&lt;/h6&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Tester&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;div class="progress-showcase"&gt;
-                    &lt;div class="progress" style="height: 8px;"&gt;
-                    &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class="digits"&gt;5 Month&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td class="bd-t-none u-s-tb"&gt;
-                    &lt;div class="align-middle image-sm-size"&gt;&lt;img class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/user.png" alt="" data-original-title="" title=""&gt;
-                    &lt;div class="d-inline-block"&gt;
-                    &lt;h6&gt;Hileri Soli &lt;span class="text-muted digits"&gt;(150+ Online)&lt;/span&gt;&lt;/h6&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Designer&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;div class="progress-showcase"&gt;
-                    &lt;div class="progress" style="height: 8px;"&gt;
-                    &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class="digits"&gt;3 Month&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td class="bd-t-none u-s-tb"&gt;
-                    &lt;div class="align-middle image-sm-size"&gt;&lt;img class="img-radius align-top m-r-15 rounded-circle blur-up lazyloaded" src="../assets/images/dashboard/designer.jpg" alt="" data-original-title="" title=""&gt;
-                    &lt;div class="d-inline-block"&gt;
-                    &lt;h6&gt;Pusiz bia &lt;span class="text-muted digits"&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Designer&lt;/td&gt;
-                &lt;td&gt;
-                    &lt;div class="progress-showcase"&gt;
-                    &lt;div class="progress" style="height: 8px;"&gt;
-                    &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class="digits"&gt;5 Year&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                                    </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Sales Status</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-xl-3 col-sm-6 xl-50">
-                                        <div class="order-graph">
-                                            <h6>Orders By Location</h6>
-                                            <div class="chart-block chart-vertical-center">
-                                                <canvas id="myDoughnutGraph"></canvas>
-                                            </div>
-                                            <div class="order-graph-bottom">
-                                                <div class="media">
-                                                    <div class="order-color-primary"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0">Saint Lucia <span
-                                                                class="pull-right">$157</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-color-secondary"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0">Kenya <span class="pull-right">$347</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-color-danger"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0">Liberia<span class="pull-right">$468</span>
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-color-warning"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0">Christmas Island<span
-                                                                class="pull-right">$742</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-color-success"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0">Saint Helena <span
-                                                                class="pull-right">$647</span></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 xl-50">
-                                        <div class="order-graph sm-order-space">
-                                            <h6>Sales By Location</h6>
-                                            <div class="peity-chart-dashboard text-center">
-                                                <span class="pie-colours-1">4,7,6,5</span>
-                                            </div>
-                                            <div class="order-graph-bottom sales-location">
-                                                <div class="media">
-                                                    <div class="order-shape-primary"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0 me-0">Germany <span
-                                                                class="pull-right">25%</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-shape-secondary"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0 me-0">Brasil <span class="pull-right">10%</span>
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-shape-danger"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0 me-0">United Kingdom<span
-                                                                class="pull-right">34%</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-shape-warning"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0 me-0">Australia<span
-                                                                class="pull-right">5%</span></h6>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <div class="order-shape-success"></div>
-                                                    <div class="media-body">
-                                                        <h6 class="mb-0 me-0">Canada <span class="pull-right">25%</span>
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 xl-100">
-                                        <div class="order-graph xl-space">
-                                            <h6>Revenue for last month</h6>
-                                            <div class="ct-4 flot-chart-container"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard"
-                                            data-clipboard-target="#example-head2" title="" data-original-title="Copy">
-                                        <i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head2">&lt;div class="row"&gt;
-   &lt;div class="col-xl-3 col-sm-6 xl-50"&gt;
-      &lt;div class="order-graph"&gt;
-         &lt;h6&gt;Orders By Location&lt;/h6&gt;
-         &lt;div class="chart-block chart-vertical-center"&gt;
-            &lt;canvas id="myDoughnutGraph"&gt;&lt;/canvas&gt;
-         &lt;/div&gt;
-         &lt;div class="order-graph-bottom"&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-color-primary"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0"&gt;Saint Lucia &lt;span class="pull-right"&gt;$157&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-color-secondary"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0"&gt;Kenya &lt;span class="pull-right"&gt;$347&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-color-danger"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0"&gt;Liberia&lt;span class="pull-right"&gt;$468&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-color-warning"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0"&gt;Christmas Island&lt;span class="pull-right"&gt;$742&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-color-success"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0"&gt;Saint Helena &lt;span class="pull-right"&gt;$647&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="col-xl-3 col-sm-6 xl-50"&gt;
-      &lt;div class="order-graph sm-order-space"&gt;
-         &lt;h6&gt;Sales By Location&lt;/h6&gt;
-         &lt;div class="peity-chart-dashboard text-center"&gt;
-            &lt;span class="pie-colours-1"&gt;4,7,6,5&lt;/span&gt;
-         &lt;/div&gt;
-         &lt;div class="order-graph-bottom sales-location"&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-shape-primary"&gt;&lt;/div&gt;
-                  &lt;div class="media-body"&gt;
-                     &lt;h6 class="mb-0 me-0"&gt;Germany &lt;span class="pull-right"&gt;25%&lt;/span&gt;&lt;/h6&gt;
-                  &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-shape-secondary"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0 me-0"&gt;Brasil &lt;span class="pull-right"&gt;10%&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-shape-danger"&gt;&lt;/div&gt;
-                  &lt;div class="media-body"&gt;
-                     &lt;h6 class="mb-0 me-0"&gt;United Kingdom&lt;span class="pull-right"&gt;34%&lt;/span&gt;&lt;/h6&gt;
-                  &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-shape-warning"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0 me-0"&gt;Australia&lt;span class="pull-right"&gt;5%&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="media"&gt;
-               &lt;div class="order-shape-success"&gt;&lt;/div&gt;
-               &lt;div class="media-body"&gt;
-                  &lt;h6 class="mb-0 me-0"&gt;Canada &lt;span class="pull-right"&gt;25%&lt;/span&gt;&lt;/h6&gt;
-               &lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="col-xl-6 xl-100"&gt;
-      &lt;div class="order-graph xl-space"&gt;
-         &lt;h6&gt;Revenue for last month&lt;/h6&gt;
-         &lt;div class="ct-4 flot-chart-container"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Container-fluid Ends-->
-
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Starter Pages
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Active Page</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Inactive Page</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Simple Link
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
         </div>
+        <!-- /.sidebar -->
+    </aside>
 
-        <!-- footer start-->
-        <footer class="footer">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Starter Page</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Starter Page</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 footer-copyright">
-                        <p class="mb-0">Copyright 2019 © Multikart All rights reserved.</p>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.
+                                </p>
+
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+
+                        <div class="card card-primary card-outline">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.
+                                </p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div><!-- /.card -->
                     </div>
-                    <div class="col-md-6">
-                        <p class="pull-right mb-0">Hand crafted & made with<i class="fa fa-heart"></i></p>
+                    <!-- /.col-md-6 -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="m-0">Featured</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Special title treatment</h6>
+
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card card-primary card-outline">
+                            <div class="card-header">
+                                <h5 class="m-0">Featured</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Special title treatment</h6>
+
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- /.col-md-6 -->
                 </div>
-            </div>
-        </footer>
-        <!-- footer end-->
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
 
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
 </div>
+<!-- ./wrapper -->
 
-<!-- latest jquery-->
-{{--<script src="../assets/js/jquery-3.3.1.min.js"></script>--}}
+<!-- REQUIRED SCRIPTS -->
 
-<!-- Bootstrap js-->
-{{--<script src="../assets/js/bootstrap.bundle.min.js"></script>--}}
-
-<!-- feather icon js-->
-{{--<script src="../assets/js/icons/feather-icon/feather.min.js"></script>--}}
-{{--<script src="../assets/js/icons/feather-icon/feather-icon.js"></script>--}}
-
-<!-- Sidebar jquery-->
-{{--<script src="../assets/js/sidebar-menu.js"></script>--}}
-
-<!--chartist js-->
-{{--<script src="../assets/js/chart/chartist/chartist.js"></script>--}}
-
-<!--chartjs js-->
-{{--<script src="../assets/js/chart/chartjs/chart.min.js"></script>--}}
-
-<!-- lazyload js-->
-{{--<script src="../assets/js/lazysizes.min.js"></script>--}}
-
-<!--copycode js-->
-{{--<script src="../assets/js/prism/prism.min.js"></script>
-<script src="../assets/js/clipboard/clipboard.min.js"></script>
-<script src="../assets/js/custom-card/custom-card.js"></script>--}}
-
-<!--counter js-->
-{{--<script src="../assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="../assets/js/counter/jquery.counterup.min.js"></script>
-<script src="../assets/js/counter/counter-custom.js"></script>--}}
-
-<!--peity chart js-->
-{{--<script src="../assets/js/chart/peity-chart/peity.jquery.js"></script>--}}
-
-<!--sparkline chart js-->
-{{--<script src="../assets/js/chart/sparkline/sparkline.js"></script>--}}
-
-<!--Customizer admin-->
-{{--<script src="../assets/js/admin-customizer.js"></script>--}}
-
-<!--dashboard custom js-->
-{{--<script src="../assets/js/dashboard/default.js"></script>--}}
-
-<!--right sidebar js-->
-{{--<script src="../assets/js/chat-menu.js"></script>--}}
-
-<!--height equal js-->
-{{--<script src="../assets/js/height-equal.js"></script>--}}
-
-
-<!--script admin-->
+<!-- jQuery -->
+<!-- Bootstrap 4 -->
+<!-- AdminLTE App -->
 <script src="{{asset('theme/js/admin.js')}}"></script>
-
 </body>
 </html>
