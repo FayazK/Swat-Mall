@@ -18385,9 +18385,20 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 __webpack_require__(/*! jquery-scrollfix */ "./node_modules/jquery-scrollfix/src/scrollfix.js");
 
 __webpack_require__(/*! admin-lte */ "./node_modules/admin-lte/dist/js/adminlte.min.js");
+/* --------------------------------------------------------------
+ *  Scroll Fix
+ * --------------------------------------------------------------
+ */
 
-$('[data-scroll-fix]').scrollFix({
+
+$('[data-scroll-fix="bottom"]').scrollFix({
   side: 'bottom'
+});
+$('[data-scroll-fix="top"]').scrollFix({
+  side: 'top'
+});
+$('[data-scroll-fix="both"]').scrollFix({
+  side: 'both'
 });
 })();
 

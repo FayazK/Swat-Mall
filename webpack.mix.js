@@ -28,6 +28,7 @@ mix.sass('resources/scss/admin.scss', 'public/theme/css')
     .sass('resources/scss/front.scss', 'public/theme/css')
     .sass('resources/scss/landing_page.scss', 'public/theme/css')
     .js('resources/js/admin.js','public/theme/js')
+    .js('resources/js/front.js','public/theme/js')
 
 if (mix.inProduction()) {
     mix.version()
