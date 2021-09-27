@@ -287,5 +287,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </footer>
 </div>
 <script src="{{asset('theme/js/admin.js')}}"></script>
+@stack('footer')
 </body>
 </html>

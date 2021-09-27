@@ -1,6 +1,8 @@
 window.jQuery = window.$ = require('jquery')
 require('bootstrap')
 require('jquery-scrollfix')
+require('datatables')
+
 require('admin-lte')
 
 /* --------------------------------------------------------------

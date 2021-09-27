@@ -30,6 +30,8 @@
         "bootstrap": "^4.6.0",
         "chartist": "^0.11.4",
         "chartjs": "^0.3.24",
+        "datatables": "^1.10.18",
+        "datatables.net-bs4": "^1.11.2",
         "feather-icons": "^4.28.0",
         "jquery": "^3.6.0",
         "jquery-scrollfix": "^3.0.2"
