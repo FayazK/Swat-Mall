@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\UsersDataTable;
 use App\Helpers\Theme;
 use App\Services\UserService;
+use Exception;
 use Illuminate\Http\Request;
 
 /**
@@ -27,14 +29,11 @@ class UserController extends Controller
 
     /**
      *
-     * @throws \Exception
+     * @throws Exception
      */
-    public function index( Request $request )
+    public function index( UsersDataTable $usersDataTable )
     {
-        if( $request->isMethod( 'POST' ) && $request->ajax() ) {
-            return $this->service->dataTables();
-        }
-        return Theme::view( 'users.index' );
+        return $usersDataTable->render( 'admin.users.index' );
     }// index
 
 }// UserController

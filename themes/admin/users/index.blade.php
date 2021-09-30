@@ -6,14 +6,5 @@
 @endsection
 
 @push('footer')
-    <script>
-      let table
-      $(document).ready(function () {
-        table = $('#listing-table').dataTable({
-          'processing': true,
-          'serverSide': true,
-          'ajax': "{{route('admin.users.all.ajax')}}"
-        })
-      })
-    </script>
+    {{$dataTable->scripts()}}
 @endpush
